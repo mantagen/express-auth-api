@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.app-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.view {
+    position: absolute;
+    width: 100vw;
+    padding: 2em;
+
+}
+.view.signup {
+    transition: top 0.6s ease;
+    top: 0;
+}
+.view.signup.hidden {
+    top: -100vh;
+}
+.view.login {
+    transition: left 0.3s ease;
+    left: 0;
+}
+.view.login.hidden {
+    left: -100vw;
+}
+.view.profile {
+    transition: right 0.3s ease;
+    right: 0;
+}
+.view.profile.hidden {
+    right: -100vw;
+}
+
+.loading-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    background-color: rgb(205,224,202);
+    color: blue;
+    transition: opacity 0.4s ease;
+}
+.loading-container.active {
+    display: block;
+}
+
+.error-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2em;
+    background-color: red;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.logout-button.hidden {
+    display: none;
+}
+
+.error-container.active {
+    opacity: 1;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>Github OAuth Example App</title>
+    </head>
+    <body>
+    <div class="page-wrapper">
+      <header class="main-header">
+          <nav class="navbar navbar-default">
+          </nav>
+      </header>
+      <div class="app-wrapper">
+          <section class="signup view">
+              <form class="form signup-form">
+                  <input type="text" name="username" value="" />
+                  <input type="email" name="email" value="" />
+                  <input type="password" name="password" value="" />
+                  <button class="signup-submit-button" type="submit">Sign up</button>
+                  <footer class="footer form-footer">
+                      Already have an account? <a class='login-link' href='#'>Log in</a>
+                  </footer>
+              </form>
+          </section>
+          <section class="login view">
+              <form class="form login-form">
+                  <input type="email" name="email" value="" />
+                  <!-- <input type=text name="username" value="" /> -->
+                  <input type="password" name="password" value="" />
+                  <button class="login-submit-button" type="submit">Log in</button>
+              </form>
+              <footer class="footer form-footer">
+                  Don't have an account? <a class='signup-link' href='#'>Sign up</a>
+              </footer>
+          </section>
+          <section class="profile view active">
+              <p class="profile-name">Thalaatha</p>
+              <p class="profile-email">khamsa@sifr.com</p>
+              <p class="profile-bio"><em>// You haven't written a bio yet ...</em></p>
+              <footer class="footer form-footer">
+                  <a class="logout-button" href="#">Log out</a>
+              </footer>
+          </section>
+          <aside class="error-container">
+          </aside>
+          <aside class="loading-container active">
+              Loading ...
+          </aside>
+      </div>
+      <footer>
+        <p>&copy;</p>
+      </footer>
+    </div>
+    <script src="/js/request.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
