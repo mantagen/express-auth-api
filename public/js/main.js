@@ -163,10 +163,7 @@ const app = (function(){
     const init = () => {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const formData = Object.keys(forms.login).reduce((data, inputName) => {
-              data[inputName] = forms.login[inputName];
-              return data;
-            }, {});
+            const formData = helpers.parseFormData('login');
 
             source.login(formData);
         });

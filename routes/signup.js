@@ -1,19 +1,11 @@
-const users = {
-
-}
-
-const addUser = (userStore, user) => {
-    const { username, email, password } = user;
-    users[username] = {
-      username,
-      email,
-      password
-    };
-}
-
+const { addUser } = require('../model/users');
 
 exports.post = (req, res, next) => {
   const user = req.body;
-  addUser(users, user);
-  console.log(users);
+  addUser(user, (err) => {
+    if(err) {
+      return res.status(500).json({ message: 'There was a signup error' })
+    }
+    res.json({ username: user.username })
+  });
 }
